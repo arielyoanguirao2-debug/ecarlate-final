@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ECARLATE | Premium Store</title>
+    <link rel="stylesheet" href="vet_style.css">
+</head>
+<body onclick="forcePlayVideo()"> 
+    
+    <header>
+        <div class="logo">ECARLATE</div>
+        <div class="menu-btn" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <nav id="sideBar" class="side-bar">
+        <div class="close-nav" onclick="toggleNav()">×</div>
+        <ul>
+            <li onclick="location.reload()">ACCUEIL</li>
+            <li onclick="showFullCatalogue(); toggleNav()">CATALOGUE COMPLET</li>
+        </ul>
+    </nav>
+
+    <main class="main-catalog">
+        <div id="homeSection">
+            <div class="hero-container" onclick="handleVideoInteraction()">
+                <video id="mainVideo" autoplay loop muted playsinline preload="auto">
+                    <source src="Img_magasin/1.mp4" type="video/mp4">
+                </video>
+                <button id="volBtn" class="hero-vol-btn">🔇</button>
+            </div>
+
+            <div class="hero-text-section">
+                <span class="eyebrow">NOUVELLE COLLECTION</span>
+                <h1>SÉLECTION PREMIUM</h1>
+                <p>L'excellence du style par Écarlate</p>
+                <div class="hero-btn-container">
+                    <button class="hero-btn" onclick="document.getElementById('homeGrid').scrollIntoView({behavior: 'smooth'})">
+                        DÉCOUVRIR
+                    </button>
+                </div>
+            </div>
+
+            <h3 class="section-title">DERNIERS ARRIVAGES</h3>
+            <div id="homeGrid" class="product-grid"></div>
+            
+            <div class="see-more-container">
+                <button class="see-more-btn" onclick="showFullCatalogue()">
+                    <span>EXPLORER LE CATALOGUE</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <h3 class="section-title">LOOKBOOK EXCLUSIF</h3>
+            <div class="reels-container">
+                <div class="reel-card" onclick="openReel('Img_magasin/1.mp4')">
+                    <video src="Img_magasin/1.mp4" autoplay loop muted playsinline></video>
+                    <span class="reel-tag">Nouveauté</span>
+                </div>
+                <div class="reel-card" onclick="openReel('Img_magasin/2.mp4')">
+                    <video src="Img_magasin/2.mp4" autoplay loop muted playsinline></video>
+                    <span class="reel-tag">Must Have</span>
+                </div>
+                <div class="reel-card" onclick="openReel('Img_magasin/3.mp4')">
+                    <video src="Img_magasin/3.mp4" autoplay loop muted playsinline></video>
+                    <span class="reel-tag">Streetwear</span>
+                </div>
+                <div class="reel-card" onclick="openReel('Img_magasin/4.mp4')">
+                    <video src="Img_magasin/4.mp4" autoplay loop muted playsinline></video>
+                    <span class="reel-tag">Premium Style</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">NOS COLLECTIONS</h3>
+            <div id="collectionGrid" class="collection-grid"></div>
+        </div>
+
+        <div id="fullCatalogue" style="display: none; padding-top: 80px;">
+            <h3 class="section-title">CATALOGUE COMPLET</h3>
+            <div id="randomGrid" class="product-grid"></div>
+        </div>
+    </main>
+
+    <div id="productView" class="product-view">
+        <div class="view-header"><button class="close-btn" onclick="closeProduct()">× FERMER</button></div>
+        <div class="view-content">
+            <div id="mediaContainer" class="media-container"></div>
+            <a id="waOrderBtn" href="#" class="buy-btn">🛒 COMMANDER SUR WHATSAPP</a>
+            
+            <div id="suggestionArea" class="suggestion-area"></div>
+        </div>
+    </div>
+
+    <div id="reelModal" class="product-view">
+        <div class="view-header"><button class="close-btn" onclick="closeReel()">× FERMER</button></div>
+        <div class="view-content" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+            <video id="modalVideo" loop playsinline controls style="max-width: 90%; max-height: 100%; border-radius: 15px;"></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
