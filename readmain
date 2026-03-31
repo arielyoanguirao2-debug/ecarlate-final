@@ -1,0 +1,34 @@
+# 🔴 ECARLATE Store - Template E-commerce Streetwear
+
+Bienvenue sur le code source de **ECARLATE Store**, une interface de vente en ligne moderne, épurée et optimisée pour les marques de vêtements indépendantes.
+
+## ✨ Points Forts
+- **Design Premium :** Thème sombre (Dark Mode) avec accents écarlates, idéal pour le streetwear.
+- **Ultra-Léger :** Construit en HTML5, CSS3 et JavaScript pur. Chargement instantané.
+- **Conversion WhatsApp :** Bouton de commande directe via WhatsApp intégré pour faciliter les ventes sans frais de transaction bancaire.
+- **Responsive :** Entièrement optimisé pour la navigation sur smartphone.
+- **Expérience Immersive :** Intégration audio et animations fluides pour une identité de marque forte.
+
+## 🚀 Installation Rapide
+1. Clonez ce dépôt ou téléchargez le fichier ZIP.
+2. Ouvrez le fichier `index.html` dans votre navigateur pour visualiser le site.
+3. Pour mettre en ligne, glissez les fichiers sur **GitHub Pages**, **Netlify** ou **Vercel**.
+
+## 🛠 Personnalisation
+Le code est structuré pour être modifié facilement, même avec des bases en programmation :
+
+### 1. Changer le numéro de commande
+Dans le fichier `script.js` (ou directement dans le lien du bouton), remplacez le numéro de téléphone dans l'URL WhatsApp :
+`https://wa.me/VOTRE_NUMERO`
+
+### 2. Modifier les produits
+Rendez-vous dans la section `<section id="catalog">` de votre fichier `index.html` pour changer les textes, les prix et les chemins des images (`src="img/votre-photo.jpg"`).
+
+### 3. Audio
+Remplacez le fichier dans le dossier `/assets` (ou dossier audio) par votre propre track pour changer l'ambiance sonore du shop.
+
+## 📝 Licence
+Ce code source est vendu pour un usage commercial personnel (une seule marque par achat). La revente du code source lui-même est interdite.
+
+---
+*Développé avec passion pour l'esthétique et l'efficacité.*
